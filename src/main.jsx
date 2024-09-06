@@ -5,6 +5,7 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import { router } from './Routes/Routes.jsx'
 import AuthProvider from './Providers/AuthProvider.jsx'
+import { Toaster } from 'react-hot-toast'
 
 
 
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
       <div className='max-w-screen-xl mx-auto'>
         <RouterProvider router={router} />
       </div>
+      <Toaster></Toaster>
     </AuthProvider>
   </StrictMode>,
 )
