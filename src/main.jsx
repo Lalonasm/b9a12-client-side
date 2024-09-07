@@ -12,13 +12,13 @@ import { HelmetProvider } from 'react-helmet-async'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <HelmetProvider>
-   <AuthProvider>
-      <div className='max-w-screen-xl mx-auto'>
-        <RouterProvider router={router} />
-      </div>
-      <Toaster></Toaster>
-    </AuthProvider>
-   </HelmetProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <div className='max-w-screen-xl mx-auto'>
+          <RouterProvider router={router} />
+        </div>
+        <Toaster></Toaster>
+      </AuthProvider>
+    </HelmetProvider>
   </StrictMode>,
 )
