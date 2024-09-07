@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Slide from './Slide';
 // import Slide from './Slide';
 
 export default function Carousel() {
@@ -35,16 +36,16 @@ export default function Carousel() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    {/* <Slide image={banner1} text='Get Your Web Development Projects Done in minutes'> </Slide> */}
-                 <img src={banner1} alt="" />
+                    <Slide image={banner1} text='Comprehensive Management for Your Building’s Needs'> </Slide>
+                 {/* <img src={banner1} alt="" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {/* <Slide image={banner2} text='Get Your Graphics Design Projects Done in minutes.'> </Slide> */}
-                    <img src={banner2} alt="" />
+                    <Slide image={banner2} text='Optimizing Building Efficiency, One Step at a Time'> </Slide>
+                    {/* <img src={banner2} alt="" /> */}
                 </SwiperSlide>
                 <SwiperSlide>
-                    {/* <Slide image={banner3} text='Get Your Digital Marketing Projects Done in Minutes '> </Slide> */}
-                    <img src={banner3} alt="" />
+                    <Slide image={banner3} text='Streamlined Building Management for a Better Future'> </Slide>
+                    {/* <img src={banner3} alt="" /> */}
                 </SwiperSlide>
 
 
