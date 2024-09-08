@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Banner from "../Banner/Banner";
+import Categories from "../../../components/Categories/Categories";
 
 
 const Home = () => {
@@ -9,7 +10,8 @@ const Home = () => {
             <Helmet>
                 <title>Safoon Estate | Vacation Homes & Condo Rentals </title>
             </Helmet>
-            <Banner></Banner>
+            <Categories></Categories>
+<Banner></Banner>
         </div>
     );
 };
