@@ -4,45 +4,32 @@ import Heading from '../../Shared/Heading'
 import Container from '../../Shared/Container'
 import LoadingSpinner from '../../Shared/LoadingSpinner'
 import Card from './Card'
-import { useQuery } from '@tanstack/react-query'
+
 import useAxiosSecure from '../../hooks/useAxiosSecure'
 import { Helmet } from 'react-helmet-async'
+import { useQuery } from '@tanstack/react-query'
 // import Card from './Card'
 // import Container from '../Shared/Container'
 // import Heading from '../Shared/Heading'
 // import LoadingSpinner from '../Shared/LoadingSpinner'
 
 const Apartments = () => {
-    const axiosSecure = useAxiosSecure();
-    const [apartments, setApartments] = useState([])
-    const [loading, setLoading] = useState(false)
+    const axiosSecure = useAxiosSecure()
 
-    const query = useQuery(
+
+    const { data: apartments = [], isLoading } = useQuery(
         {
             queryKey: ['apartments'],
             queryFn: async () => {
                 const { data } = await axiosSecure.get('/apartments');
-                console.log(data);
+                // console.log(data);
                 return data
             }
         }
     )
 
-    console.log(query);
 
-
-    useEffect(() => {
-        setLoading(true)
-        fetch(`http://localhost:8000/apartments`)
-            .then(res => res.json())
-            .then(data => {
-                setApartments(data)
-                setLoading(false)
-                console.log(data)
-            })
-    }, [])
-
-    if (loading) return <LoadingSpinner />
+    if (isLoading) return <LoadingSpinner />
 
     return (
         <Container>
@@ -61,7 +48,7 @@ const Apartments = () => {
                 <div className='flex items-center justify-center min-h-[calc(100vh-300px)]'>
                     <Heading
                         center={true}
-                        title='No Apartment Available In This Category!'
+                        title='No Apartment Available In This Types!'
                         subtitle='Please Select Other Categories.'
                     />
                 </div>
