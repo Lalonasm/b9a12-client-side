@@ -5,9 +5,10 @@ import { useContext } from 'react'
 
 import toast from 'react-hot-toast'
 import { AuthContext } from '../../Providers/AuthProvider'
+import { TbAlertCircle, TbAperture, TbFidgetSpinner } from 'react-icons/tb'
 const Register = () => {
     const navigate = useNavigate()
-    const { signInWithGoogle, createUser, updateUserProfile, user, setUser } =
+    const { signInWithGoogle, createUser, updateUserProfile, user, setUser, loading, setLoading } =
         useContext(AuthContext)
 
     const handleSignUp = async e => {
@@ -161,12 +162,26 @@ const Register = () => {
                             />
                         </div>
                         <div className='mt-6'>
+
                             <button
+                                disabled={loading}
+                                type='submit'
+                                className=' bg-gray-800 w-full rounded-md py-3 text-white'
+                            >
+                                {loading ? (
+                                    // <TbFidgetSpinner className='animate-spin m-auto' />
+                                    // <TbAperture className='animate-spin m-auto' />
+                                    <TbAlertCircle className='animate-spin m-auto text-xl' />
+                                ) : (
+                                    ' Sign Up'
+                                )}
+                            </button>
+                            {/* <button
                                 type='submit'
                                 className='w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50'
                             >
                                 Sign Up
-                            </button>
+                            </button> */}
                         </div>
                     </form>
 

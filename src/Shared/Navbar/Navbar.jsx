@@ -17,10 +17,10 @@ const Navbar = () => {
             <div className='flex-none'>
                 <ul className='menu menu-horizontal px-1'>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link className='block px-4 py-3 hover:bg-neutral-100 transition font-semibold' to='/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/apartments'>Apartment</Link>
+                        <Link className='block px-4 py-3 hover:bg-neutral-100 transition font-semibold' to='/apartments'>Apartment</Link>
                     </li>
 
                     {!user && (
@@ -50,12 +50,12 @@ const Navbar = () => {
                             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
                         >
                             <li>
-                                <Link className='justify-between read-only:'>
+                                <Link className='block justify-between read-only px-4 py-3 hover:bg-neutral-100 transition font-semibold'>
                                     {user.displayName}
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/my-posted-jobs'>Dashboard</Link>
+                                <Link className='block px-4 py-3 hover:bg-neutral-100 transition font-semibold' to='/dashboard'>Dashboard</Link>
                             </li>
 
 

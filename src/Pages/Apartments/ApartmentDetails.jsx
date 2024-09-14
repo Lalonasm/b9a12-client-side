@@ -1,27 +1,29 @@
 
 import { Helmet } from 'react-helmet-async'
 
-import useAxiosSecure from '../../hooks/useAxiosSecure'
+// import useAxiosSecure from '../../hooks/useAxiosSecure'
 import { useQuery } from '@tanstack/react-query'
 import LoadingSpinner from '../../Shared/LoadingSpinner'
 import { useParams } from 'react-router-dom'
 import Container from '../../Shared/Container'
 import ApartmentReservation from './ApartmentReservation'
 import Heading from '../../Shared/Heading'
+import useAxiosRegular from '../../hooks/useAxiosRegular'
+// import { axiosRegular } from '../../hooks/useAxiosRegular'
 
 
 const ApartmentDetails = () => {
 
     const { id } = useParams();
 
-    const axiosSecure = useAxiosSecure()
+    const axiosRegular = useAxiosRegular()
 
 
     const { data: apartment = {}, isLoading } = useQuery(
         {
             queryKey: ['apartment', id],
             queryFn: async () => {
-                const { data } = await axiosSecure.get(`/apartment/${id}`);
+                const { data } = await axiosRegular.get(`/apartment/${id}`);
                 // console.log(data);
                 return data
             }
