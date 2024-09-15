@@ -6,6 +6,13 @@ import Login from "../Pages/Authentication/Login";
 import Register from "../Pages/Authentication/Register";
 import Apartments from "../Pages/Apartments/Apartments";
 import ApartmentDetails from "../Pages/Apartments/ApartmentDetails";
+import DashboardLayout from "../layout/DashboardLayout";
+import Statistics from "../Pages/Dashboard/Common/Statistics";
+import MakePayment from "../Pages/Dashboard/Member/MakePayment";
+import PaymentHistory from "../Pages/Dashboard/Member/PaymentHistory";
+import Announcement from "../Pages/Dashboard/Common/Announcement";
+import AddApartment from "../Pages/Dashboard/Member/AddApartment";
+
 
 export const router = createBrowserRouter([
     {
@@ -50,8 +57,30 @@ export const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <p>Dashboard</p>,
-        children: [],
+        element: <DashboardLayout></DashboardLayout>,
+        children: [
+            {
+                path: 'dashboard',
+                element: <Statistics></Statistics>
+
+            },
+            {
+                path: 'make-payment',
+                element: <MakePayment></MakePayment>
+            },
+            {
+                path: 'payment-history',
+                element: <PaymentHistory></PaymentHistory>
+            },
+            {
+                path: 'announcement',
+                element: <Announcement></Announcement>
+            },
+            {
+                path: 'add-apartment',
+                element: <AddApartment></AddApartment>
+            },
+        ],
     },
 
 ]);
