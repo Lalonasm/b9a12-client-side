@@ -2,7 +2,7 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import { useState } from 'react';
 
 const ApartmentLocation = () => {
-    const [location, setLocation] = useState({ lat: 51.505, lng: -0.09 });
+    const [location, setLocation] = useState({ lat: 90.4152, lng: 23.8041});
     const [directions, setDirections] = useState("");
 
     // Function to update location based on map clicks
@@ -63,4 +63,4 @@ const ApartmentLocation = () => {
     );
 };
 
-export default ApartmentLocation;
+export default ApartmentLocation
