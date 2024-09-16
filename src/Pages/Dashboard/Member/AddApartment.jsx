@@ -3,7 +3,7 @@ import AddApartmentForm from '../../../components/Form/AddApartmentForm';
 
 const AddApartment = () => {
 
-    const [dates, setDates] = useStateuseState([
+    const [dates, setDates] = useState([
         {
             startDate: new Date(),
             endDate: null,
