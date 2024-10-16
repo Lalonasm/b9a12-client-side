@@ -2,9 +2,10 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import useAuth from './useAuth'
 import { useNavigate } from 'react-router-dom'
+import apartment from './../../public/apartments.json'
 
 export const axiosSecure = axios.create({
-  baseURL: 'https://b9a12-server-side-e3zrv7mot-lalonasms-projects.vercel.app',
+  baseURL:  apartment ,
   withCredentials: true,
 })
 const useAxiosSecure = () => {
