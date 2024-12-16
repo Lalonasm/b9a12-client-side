@@ -8,13 +8,13 @@ const Footer = () => {
                 <div className='flex flex-col items-center text-center'>
                     <div className='flex gap-2 items-center'>
                         <img className='w-auto h-7' src={logo} alt='' />
-                        <span>Safoon Estate</span>
+                        <span className='hover:text-white'>Safoon Estate</span>
                     </div>
 
-                    <div className='flex flex-wrap justify-center mt-6 -mx-4'>
+                    <div className='flex flex-wrap justify-center mt-6 -mx-4 '>
                         <a
                             href='#'
-                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             {' '}
@@ -23,7 +23,7 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             {' '}
@@ -32,7 +32,7 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             {' '}
@@ -41,7 +41,7 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             {' '}
@@ -50,7 +50,7 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             {' '}
@@ -62,18 +62,18 @@ const Footer = () => {
                 <hr className='my-6 border-gray-200 md:my-10 ' />
 
                 <div className='flex flex-col items-center sm:flex-row sm:justify-between'>
-                    <p className='text-sm text-gray-500 '>
+                    <p className='text-sm text-gray-500  hover:text-white'>
                         © Copyright 2024. All Rights Reserved.
                     </p>
 
                     <div className='flex -mx-2'>
                         <a
                             href='#'
-                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Reddit'
                         >
                             <svg
-                                className='w-5 h-5 fill-current'
+                                className='w-5 h-5 fill-current  hover:text-white'
                                 viewBox='0 0 24 24'
                                 fill='none'
                                 xmlns='http://www.w3.org/2000/svg'
@@ -84,11 +84,11 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Facebook'
                         >
                             <svg
-                                className='w-5 h-5 fill-current'
+                                className='w-5 h-5 fill-current  hover:text-white'
                                 viewBox='0 0 24 24'
                                 fill='none'
                                 xmlns='http://www.w3.org/2000/svg'
@@ -99,7 +99,7 @@ const Footer = () => {
 
                         <a
                             href='#'
-                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 '
+                            className='mx-2 text-gray-600 transition-colors duration-300 hover:text-white '
                             aria-label='Github'
                         >
                             <svg

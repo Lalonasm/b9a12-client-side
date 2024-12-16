@@ -8,20 +8,22 @@ import Card from './Card'
 import useAxiosSecure from '../../hooks/useAxiosSecure'
 import { Helmet } from 'react-helmet-async'
 import { useQuery } from '@tanstack/react-query'
+import useAxiosRegular from '../../hooks/useAxiosRegular'
 // import Card from './Card'
 // import Container from '../Shared/Container'
 // import Heading from '../Shared/Heading'
 // import LoadingSpinner from '../Shared/LoadingSpinner'
 
 const Apartments = () => {
-    const axiosSecure = useAxiosSecure()
+    // const axiosSecure = useAxiosSecure()
+    const axiosRegular = useAxiosRegular()
 
 
     const { data: apartments = [], isLoading } = useQuery(
         {
             queryKey: ['apartments'],
             queryFn: async () => {
-                const { data } = await axiosSecure.get('/apartments');
+                const { data } = await axiosRegular.get('/apartments');
                 // console.log(data);
                 return data
             }

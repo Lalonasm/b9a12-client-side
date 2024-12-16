@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import apartment from './../../public/apartments.json'
 
 export const axiosSecure = axios.create({
-  baseURL:  apartment ,
+  baseURL: apartment,
   withCredentials: true,
 })
 const useAxiosSecure = () => {
